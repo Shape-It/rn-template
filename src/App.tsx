@@ -6,6 +6,7 @@ import { RootNavigator } from './navigator';
 import { Provider as StoreProvider } from 'react-redux';
 import { persistor, store } from '@/store';
 import { PersistGate } from 'redux-persist/integration/react';
+import { hide } from 'react-native-bootsplash';
 
 const styles = StyleSheet.create({
   container: {
@@ -14,11 +15,15 @@ const styles = StyleSheet.create({
 });
 
 export default function App(): JSX.Element {
+  const bootstrap = () => {
+    hide({ fade: true });
+  };
+
   return (
     <GestureHandlerRootView style={styles.container}>
       <SafeAreaProvider>
         <StoreProvider store={store}>
-          <PersistGate persistor={persistor}>
+          <PersistGate persistor={persistor} onBeforeLift={bootstrap}>
             <RootNavigator />
           </PersistGate>
         </StoreProvider>
