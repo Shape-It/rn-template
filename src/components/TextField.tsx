@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Image, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
 import { normalize } from '@/utils';
 import { colors, spacing } from '@/theme';
+import { EyeCloseIcon, EyeIcon } from '@/assets';
 
 interface TextField {
   onBlur?: any;
@@ -53,7 +54,7 @@ export const TextField: React.FC<TextField> = ({
 }) => {
   const [isSecureTextEntry, setIsSecureTextEntry] = useState(!!secureTextEntry);
 
-  // const togglePasswordIcon = isSecureTextEntry ? <EyeClose /> : <Eye />;
+  const togglePasswordIcon = isSecureTextEntry ? <EyeCloseIcon /> : <EyeIcon />;
 
   const toggleSecureTextEntry = () => {
     setIsSecureTextEntry((current) => !current);
@@ -78,7 +79,7 @@ export const TextField: React.FC<TextField> = ({
             onPress={toggleSecureTextEntry}
             style={styles.toggle}
           >
-            {/* {togglePasswordIcon} */}
+            {togglePasswordIcon}
           </TouchableOpacity>
         )}
       </View>
