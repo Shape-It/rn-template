@@ -3,8 +3,7 @@ export const en = {
     loading: 'Loading...',
   },
   welcome: {
-    title: 'Shape It',
-    subtitle: 'React Native Template',
+    title: 'React Native Template',
     button: 'Start',
   },
   login: {
@@ -13,6 +12,6 @@ export const en = {
     passwordPlaceholder: 'Password',
   },
   home: {
-    title: 'Welcome',
+    button: 'Logout',
   },
 };

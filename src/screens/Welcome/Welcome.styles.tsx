@@ -12,6 +12,10 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
   },
+  icon: {
+    alignSelf: 'center',
+    marginBottom: spacing.m,
+  },
   centerText: {
     textAlign: 'center',
   },

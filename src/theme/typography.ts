@@ -9,8 +9,8 @@ export const typography = StyleSheet.create({
     color: colors.white,
   },
   subtitle: {
-    fontWeight: '300',
-    fontSize: normalize(30),
+    fontWeight: '200',
+    fontSize: normalize(25),
     color: colors.white,
   },
   button: {

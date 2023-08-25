@@ -1,2 +1,5 @@
-export { EyeIcon } from './eye';
-export { EyeCloseIcon } from './eye_close';
+export { EyeIcon } from './Eye';
+export { EyeCloseIcon } from './EyeClose';
+export { LogoIcon } from './Logo';
+export { FullLogoIcon } from './FullLogo';
+export { AlternativeFullLogoIcon } from './AlternativeFullLogo';

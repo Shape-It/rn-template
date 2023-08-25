@@ -10,7 +10,15 @@ export function AppNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Group>
-        <Stack.Screen name={NAVIGATION.home} component={Home} />
+        <Stack.Screen
+          name={NAVIGATION.home}
+          component={Home}
+          options={{
+            headerTitleStyle: {
+              fontWeight: '900',
+            },
+          }}
+        />
       </Stack.Group>
     </Stack.Navigator>
   );

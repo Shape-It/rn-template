@@ -5,14 +5,21 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
+    padding: spacing.l,
+  },
+  content: {
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
   },
-  welcome: {
-    fontSize: spacing.m,
-    marginBottom: spacing.m,
+  button: {
+    marginTop: 'auto',
+    paddingHorizontal: spacing.m,
+    paddingVertical: spacing.xs,
+    borderRadius: spacing.xs,
+    backgroundColor: colors.black,
   },
-  text: {
-    fontSize: spacing.l,
-    fontWeight: 'bold',
+  centerText: {
+    textAlign: 'center',
   },
 });

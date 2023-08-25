@@ -18,7 +18,7 @@ export function Login(): JSX.Element {
   };
 
   return (
-    <Container style={styles.container} headerHeight={-70}>
+    <Container style={styles.container}>
       <View style={styles.content}>
         <TextField
           testID={strings.login.emailPlaceholder}
