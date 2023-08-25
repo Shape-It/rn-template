@@ -1,1 +1,1 @@
-export { en as strings } from './en';
+export { strings } from './Localization';

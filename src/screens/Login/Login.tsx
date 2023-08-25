@@ -13,8 +13,7 @@ export function Login(): JSX.Element {
   const [password, setPassword] = useState<string>();
 
   const handleLogin = async () => {
-    const user = { name: email, password: password };
-    dispatch(authActions.login({ user }));
+    dispatch(authActions.login());
   };
 
   return (

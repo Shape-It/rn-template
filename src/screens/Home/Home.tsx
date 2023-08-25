@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { styles } from './Home.styles';
 import { useDispatch } from 'react-redux';
-import { authActions, useCurrentUser } from '@/store/auth';
+import { authActions } from '@/store/auth';
 import { Button } from '@/components';
 import { colors, typography } from '@/theme';
 import { strings } from '@/localization';
@@ -10,7 +10,6 @@ import { AlternativeFullLogoIcon } from '@/assets';
 
 export function Home(): JSX.Element {
   const dispatch = useDispatch();
-  const user = useCurrentUser();
 
   const handleLogout = () => {
     dispatch(authActions.clearCredentials());

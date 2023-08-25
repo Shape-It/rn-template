@@ -6,7 +6,6 @@ import { RootNavigator } from './navigator';
 import { Provider as StoreProvider } from 'react-redux';
 import { persistor, store } from '@/store';
 import { PersistGate } from 'redux-persist/integration/react';
-import { hide } from 'react-native-bootsplash';
 import { colors } from './theme';
 
 const styles = StyleSheet.create({
