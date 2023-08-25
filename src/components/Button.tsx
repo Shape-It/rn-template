@@ -6,11 +6,12 @@ interface Button {
   onPress: any;
   style: any;
   textStyle: any;
+  testID: string;
 }
 
-export const Button: React.FC<Button> = ({ title, onPress, style, textStyle }) => {
+export const Button: React.FC<Button> = ({ title, onPress, style, textStyle, testID }) => {
   return (
-    <TouchableOpacity style={style} onPress={onPress}>
+    <TouchableOpacity style={style} onPress={onPress} testID={testID}>
       <Text style={textStyle}>{title}</Text>
     </TouchableOpacity>
   );

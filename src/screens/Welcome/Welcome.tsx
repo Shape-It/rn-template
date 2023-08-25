@@ -22,6 +22,7 @@ export function Welcome(): JSX.Element {
         <Text style={[styles.centerText, typography.subtitle]}>{strings.welcome.subtitle}</Text>
       </View>
       <Button
+        testID={strings.welcome.button}
         title={strings.welcome.button}
         onPress={navigateToLogin}
         style={styles.button}

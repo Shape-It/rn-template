@@ -15,7 +15,7 @@ export const typography = StyleSheet.create({
   },
   button: {
     fontWeight: 'bold',
-    fontSize: normalize(25),
+    fontSize: normalize(20),
     color: colors.black,
   },
 });
