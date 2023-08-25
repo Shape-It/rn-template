@@ -27,5 +27,5 @@ export const colors = {
   zeta300: '#F6AD55',
   zeta400: '#ED8936',
   white: '#FFFFFF',
-  black: '#000000',
+  black: '#1B1B1B',
 };

@@ -11,15 +11,17 @@ interface Button {
 
 const styles = StyleSheet.create({
   button: {
+    marginTop: 'auto',
     marginVertical: spacing.xl,
-    backgroundColor: colors.black,
+    backgroundColor: colors.white,
     paddingHorizontal: spacing.m,
     paddingVertical: spacing.xs,
     borderRadius: spacing.xs,
   },
   buttonText: {
-    fontSize: spacing.m,
-    color: colors.white,
+    textAlign: 'center',
+    fontSize: spacing.s,
+    color: colors.black,
     fontWeight: 'bold',
   },
 });

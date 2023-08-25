@@ -12,9 +12,11 @@ export function Welcome(): JSX.Element {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Shape It</Text>
-      <Text style={styles.text}>RN Template</Text>
-      <Button title="Start" onPress={() => navigate(NAVIGATION.login)} color={colors.alpha400} />
+      <View style={styles.titleContainer}>
+        <Text style={styles.text}>Shape It</Text>
+        <Text style={styles.text}>RN Template</Text>
+      </View>
+      <Button title="Start" onPress={() => navigate(NAVIGATION.login)} color={colors.white} />
     </View>
   );
 }
