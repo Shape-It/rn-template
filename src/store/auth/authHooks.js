@@ -1,13 +1,8 @@
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
-import { selectCurrentUser, selectIsLogged } from './authSlice';
+import { selectIsActiveUser } from './authSlice';
 
-export function useIsLogged() {
-  const isLogged = useSelector(selectIsLogged);
-  return useMemo(() => isLogged, [isLogged]);
-}
-
-export function useCurrentUser() {
-  const { user } = useSelector(selectCurrentUser);
-  return useMemo(() => user, [user]);
+export function useIsActiveUser() {
+  const isActiveUser = useSelector(selectIsActiveUser);
+  return useMemo(() => isActiveUser, [isActiveUser]);
 }

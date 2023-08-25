@@ -4,19 +4,27 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     padding: spacing.l,
     backgroundColor: colors.black,
+    justifyContent: 'center',
   },
-  titleContainer: {
+  content: {
     flex: 1,
     justifyContent: 'center',
   },
-  text: {
+  icon: {
+    alignSelf: 'center',
+    marginBottom: spacing.m,
+  },
+  centerText: {
     textAlign: 'center',
-    fontSize: spacing.l,
-    fontWeight: 'bold',
-    color: colors.white,
-    lineHeight: spacing.xl,
+  },
+  button: {
+    marginTop: 'auto',
+    marginVertical: spacing.xl,
+    paddingHorizontal: spacing.m,
+    paddingVertical: spacing.xs,
+    borderRadius: spacing.xs,
+    backgroundColor: colors.white,
   },
 });

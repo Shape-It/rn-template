@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Animated, Dimensions } from 'react-native';
+import { Animated, Dimensions, View } from 'react-native';
 import BootSplash from 'react-native-bootsplash';
 
 type Props = {
@@ -22,7 +22,7 @@ export const AnimatedBootSplash = ({ onAnimationEnd }: Props) => {
       Animated.stagger(250, [
         Animated.spring(translateY, {
           useNativeDriver: true,
-          toValue: -50,
+          toValue: -200,
         }),
         Animated.spring(translateY, {
           useNativeDriver: true,

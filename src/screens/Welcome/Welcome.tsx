@@ -5,18 +5,30 @@ import { ParamListBase, useNavigation } from '@react-navigation/native';
 import { NAVIGATION } from '@/constants';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Button } from '@/components';
-import { colors } from '@/theme';
+import { strings } from '@/localization';
+import { typography } from '@/theme';
+import { FullLogoIcon } from '@/assets';
 
 export function Welcome(): JSX.Element {
   const { navigate } = useNavigation<NativeStackNavigationProp<ParamListBase>>();
 
+  const navigateToLogin = () => {
+    navigate(NAVIGATION.login);
+  };
+
   return (
     <View style={styles.container}>
-      <View style={styles.titleContainer}>
-        <Text style={styles.text}>Shape It</Text>
-        <Text style={styles.text}>RN Template</Text>
+      <View style={styles.content}>
+        <FullLogoIcon style={styles.icon} />
+        <Text style={[styles.centerText, typography.subtitle]}>{strings.welcome.title}</Text>
       </View>
-      <Button title="Start" onPress={() => navigate(NAVIGATION.login)} color={colors.white} />
+      <Button
+        testID={strings.welcome.button}
+        title={strings.welcome.button}
+        onPress={navigateToLogin}
+        style={styles.button}
+        textStyle={[styles.centerText, typography.button]}
+      />
     </View>
   );
 }

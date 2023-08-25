@@ -4,6 +4,18 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NAVIGATION } from '@/constants';
 import { Login, Welcome } from '@/screens';
 
+const LOGIN_HEADER = {
+  headerLargeTitle: true,
+  headerShadowVisible: false,
+  headerTitleStyle: {
+    fontWeight: '300',
+  },
+  headerLargeTitleStyle: {
+    fontWeight: '500',
+    fontSize: 40,
+  },
+};
+
 const Stack = createNativeStackNavigator();
 
 export function AuthNavigator() {
@@ -14,7 +26,17 @@ export function AuthNavigator() {
         name={NAVIGATION.welcome}
         options={{ headerShown: false }}
       />
-      <Stack.Screen component={Login} name={NAVIGATION.login} />
+      <Stack.Screen
+        component={Login}
+        name={NAVIGATION.login}
+        options={{
+          headerLargeTitle: true,
+          headerShadowVisible: false,
+          headerTitleStyle: {
+            fontWeight: '900',
+          },
+        }}
+      />
     </Stack.Navigator>
   );
 }
