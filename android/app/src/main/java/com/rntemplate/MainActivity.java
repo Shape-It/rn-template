@@ -14,7 +14,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    RNBootSplash.init(this, R.style.BootTheme);
+    // RNBootSplash.init(this, R.style.BootTheme);
     return "rntemplate";
   }
 
