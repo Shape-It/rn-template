@@ -4,11 +4,17 @@
   "private": true,
   "scripts": {
     "postinstall": "npx pod-install",
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android": "react-native run-android --variant=developmentDebug --appIdSuffix=dev",
+    "android:prod": "react-native run-android --variant=productionDebug",
+    "android:staging": "react-native run-android --variant=stagingDebug --appIdSuffix=staging",
+    "ios": "react-native run-ios --scheme 'Development'",
+    "ios:prod": "react-native run-ios --scheme 'Production'",
+    "ios:staging": "react-native run-ios --scheme 'Staging'",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest --watchAll",
+    "coverage": "jest --coverage",
+    "test:ci": "jest",
     "prepare": "husky install"
   },
   "dependencies": {
