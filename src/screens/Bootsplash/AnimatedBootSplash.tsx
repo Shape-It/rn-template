@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Animated, Dimensions, View } from 'react-native';
+import { Animated, Dimensions } from 'react-native';
 import BootSplash from 'react-native-bootsplash';
 
 type Props = {

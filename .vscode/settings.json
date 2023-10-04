@@ -3,7 +3,6 @@
   "editor.tabSize": 2,
   "eslint.format.enable": true,
   "eslint.validate": ["typescript"],
-  "eslint.alwaysShowStatus": true,
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "editor.formatOnSave": true,
