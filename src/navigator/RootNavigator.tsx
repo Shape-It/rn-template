@@ -9,7 +9,7 @@ import { AnimatedBootSplash } from '@/screens';
 
 export function RootNavigator() {
   const isActiveUser = useIsActiveUser();
-  const [bootSplashVisible, setBootSplashVisible] = useState(true);
+  const [bootSplashVisible, setBootSplashVisible] = useState(false);
 
   if (bootSplashVisible) {
     return <AnimatedBootSplash onAnimationEnd={() => setBootSplashVisible(false)} />;

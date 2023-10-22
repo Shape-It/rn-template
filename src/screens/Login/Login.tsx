@@ -6,8 +6,9 @@ import { authActions } from '@/store/auth';
 import { Button, Container, TextField } from '@/components';
 import { strings } from '@/localization';
 import { colors, typography } from '@/theme';
+import { LoginScreenProps } from '@/navigator';
 
-export function Login(): JSX.Element {
+export const Login: React.FC<LoginScreenProps> = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();

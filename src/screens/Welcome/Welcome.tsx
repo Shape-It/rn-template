@@ -1,19 +1,17 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { styles } from './Welcome.styles';
-import { ParamListBase, useNavigation } from '@react-navigation/native';
-import { NAVIGATION } from '@/constants';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Button } from '@/components';
 import { strings } from '@/localization';
 import { typography } from '@/theme';
 import { FullLogoIcon } from '@/assets';
+import { WelcomeScreenProps } from '@/navigator';
 
-export function Welcome(): JSX.Element {
-  const { navigate } = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+export const Welcome: React.FC<WelcomeScreenProps> = ({ navigation }) => {
+  const { navigate } = navigation;
 
   const navigateToLogin = () => {
-    navigate(NAVIGATION.login);
+    navigate('Login');
   };
 
   return (

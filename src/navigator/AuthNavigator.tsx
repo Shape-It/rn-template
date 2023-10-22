@@ -1,42 +1,19 @@
-/* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { NAVIGATION } from '@/constants';
 import { Login, Welcome } from '@/screens';
+import { AuthStackParamList } from './types';
 
-const LOGIN_HEADER = {
-  headerLargeTitle: true,
-  headerShadowVisible: false,
-  headerTitleStyle: {
-    fontWeight: '300',
-  },
-  headerLargeTitleStyle: {
-    fontWeight: '500',
-    fontSize: 40,
-  },
-};
-
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<AuthStackParamList>();
 
 export function AuthNavigator() {
   return (
-    <Stack.Navigator initialRouteName={NAVIGATION.welcome}>
+    <Stack.Navigator initialRouteName={'Welcome'}>
       <Stack.Screen
         component={Welcome}
-        name={NAVIGATION.welcome}
+        name={'Welcome'}
         options={{ headerShown: false }}
       />
-      <Stack.Screen
-        component={Login}
-        name={NAVIGATION.login}
-        options={{
-          headerLargeTitle: true,
-          headerShadowVisible: false,
-          headerTitleStyle: {
-            fontWeight: '900',
-          },
-        }}
-      />
+      <Stack.Screen component={Login} name={'Login'} />
     </Stack.Navigator>
   );
 }

@@ -1,3 +1,4 @@
+import { BootsplashScreenProps } from '@/navigator';
 import { useState } from 'react';
 import { Animated, Dimensions } from 'react-native';
 import BootSplash from 'react-native-bootsplash';
@@ -6,7 +7,8 @@ type Props = {
   onAnimationEnd: () => void;
 };
 
-export const AnimatedBootSplash = ({ onAnimationEnd }: Props) => {
+export const AnimatedBootSplash: React.FC<BootsplashScreenProps> = ({ route }) => {
+  const { onAnimationEnd } = route?.params
   const [opacity] = useState(() => new Animated.Value(1));
   const [translateY] = useState(() => new Animated.Value(0));
 

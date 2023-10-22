@@ -7,8 +7,9 @@ import { Button } from '@/components';
 import { colors, typography } from '@/theme';
 import { strings } from '@/localization';
 import { AlternativeFullLogoIcon } from '@/assets';
+import { HomeScreenProps } from '@/navigator';
 
-export function Home(): JSX.Element {
+export const Home: React.FC<HomeScreenProps> = () => {
   const dispatch = useDispatch();
 
   const handleLogout = () => {

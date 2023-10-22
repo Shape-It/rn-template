@@ -1,24 +1,15 @@
-/* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { NAVIGATION } from '@/constants';
 import { Home } from '@/screens';
+import { RootStackParamList } from './types';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export function AppNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Group>
-        <Stack.Screen
-          name={NAVIGATION.home}
-          component={Home}
-          options={{
-            headerTitleStyle: {
-              fontWeight: '900',
-            },
-          }}
-        />
+        <Stack.Screen name={'Home'} component={Home} />
       </Stack.Group>
     </Stack.Navigator>
   );
